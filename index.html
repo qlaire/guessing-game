@@ -3,16 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>Guessing Game</title>
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Guess the Number</h1>
-  <div>
-    <input type="text" id="playersGuess" placeholder="Enter a number 1-100">
-    <button type="button" id="playersGuess">Submit Your Guess</button>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <i class="glyphicon glyphicon-fire welcome-icon"></i>
+      </div>
+    </div>
+    <div class="row text-center ">
+      <div class="col-md-12">
+        <h1><i class="glyphicon glyphicon-star"></i> <i class="glyphicon glyphicon-star-empty"></i> Guess the Number <i class="glyphicon glyphicon-star-empty"></i> <i class="glyphicon glyphicon-star"></i></h1>
+      </div>
+    </div>
+    
+    <div class="row text-center">
+      <div class="col-md-12">
+        <input type="text" id="playersGuess" placeholder="Enter a number 1-100">
+        <button type="button" class="btn btn-lg btn-primary" id="playersGuess">Submit Your Guess</button>
+      </div>
+    </div>
+    <div class="row text-center buttons">
+      <div class="col-md-12">
+        <button type="button" class="btn btn-success" id="playersGuess">Play Again</button>
+        <button type="button" class="btn btn-info" id="playersGuess">Give me a Hint</button>
+      </div>
+    </div> 
   </div>
-  <div class="buttons">
-    <button type="button" id="playersGuess">Play Again</button>
-    <button type="button" id="playersGuess">Give me a Hint</button>
-  </div>
+  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
 </body>
 </html>
