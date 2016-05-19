@@ -58,7 +58,7 @@
         if (numOfGuesses < 5) {
           $('#message').text("Nope. Please try again! " + guessMessage());
         } else {
-          $('#message').text("Sorry, you exceeded 5 guesses. Let's start a new game!");
+          $('#message').text("Nope. Sorry, you exceeded 5 guesses. Let's start a new game!");
           setTimeout(function() {
             playAgain();
           }, 2000);
