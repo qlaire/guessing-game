@@ -49,7 +49,7 @@
   function checkGuess(){
     if (answerArray.includes(playersGuess)) {
       $('#message').text("You already guessed that number");
-    } else if (playersGuess === 0 || playersGuess > 100) {
+    } else if (playersGuess === 0 || playersGuess > 100 || isNaN(playersGuess)) {
       $('#message').text("Please enter a number between 1-100.");
     } else {
       answerArray.push(playersGuess);
