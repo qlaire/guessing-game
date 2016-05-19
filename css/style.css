@@ -22,7 +22,38 @@ h1 {
   font-size: 6em;
 }
 
-#message {
+.messages {
   font-size: 1.8em;
   margin-top: 10px;
+}
+
+.big-message {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  font-size: 6em;
+}
+
+#guessesLeft{
+  border: 2px solid black;
+  display: inline-block;
+  padding: 10px;
+  background-color: rgba(91, 192, 222, 0.2);
+}
+
+.winspin {
+  transition: transform 2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+
+}
+
+.go {
+  transform: rotate(360deg);
+}
+
+@keyframes boo {
+  0%, 100% {transform: translateY(0);}
+  50% {transform: translateY(20px);}
+}
+
+.glyphicon-thumbs-down {
+  animation: 2s 2 boo;
 }

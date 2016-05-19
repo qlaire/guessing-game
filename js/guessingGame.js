@@ -49,19 +49,35 @@
   function checkGuess(){
     if (answerArray.includes(playersGuess)) {
       $('#message').text("You already guessed that number");
+    } else if (playersGuess === 0 || playersGuess > 100) {
+      $('#message').text("Please enter a number between 1-100.");
     } else {
       answerArray.push(playersGuess);
       numOfGuesses++;
+      var guessesLeft = 5 - numOfGuesses;
+      $('#guessesLeft').text("You have " + guessesLeft + " guesses left.");
       if (playersGuess == winningNumber) {
         $('#message').text("You won!");
+        $('#message').addClass("big-message");
+        $('#guessesLeft').css({"display": "none"});
+        $('.winspin').addClass("go");
+        $('.red').css({"color": "red"});
+        $('.green').css({"color": "green"});
+        $('.blue').css({"color": "blue"});
+        $('.yellow').css({"color": "yellow"});
+        $('.purple').css({"color": "purple"});
       } else {
         if (numOfGuesses < 5) {
           $('#message').text("Nope. Please try again! " + guessMessage());
         } else {
-          $('#message').text("Nope. Sorry, you exceeded 5 guesses. Let's start a new game!");
+          $('#message').text("Sorry, you lose!");
+          $('#message').addClass("big-message");
+          $('.red').css({"display":"none"});
+          $('#guessesLeft').css({"display":"none"});
+          $('.welcome-div').append("<i class='glyphicon glyphicon-thumbs-down welcome-icon'></i>");
           setTimeout(function() {
             playAgain();
-          }, 2000);
+          }, 4000);
           }
         }
        }
@@ -105,13 +121,20 @@
   // Allow the "Player" to Play Again
 
   function playAgain(){
-    $('#message').text("New game started!");
-    setTimeout(function() {
-      $('#message').text("");
-    }, 2000);
     numOfGuesses = 0;
     answerArray = [];
     winningNumber = generateWinningNumber();
+    $('#message').text("New game started!");
+    setTimeout(function() {
+      $('#message').text("");
+      $('#message').removeClass("big-message");
+      $('#guessesLeft').css({"display": "inline-block"});
+      $('#guessesLeft').text("You have 5 guesses.");
+    }, 2000);
+    $('.winspin').css({"color": "#333"});
+    $('.red').css({"display":"inline-block"});
+    $('.glyphicon-thumbs-down').remove();
+    $('.winspin').removeClass("go");
   }
 
 
