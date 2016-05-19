@@ -21,3 +21,8 @@ h1 {
   font-weight: 700;
   font-size: 6em;
 }
+
+#message {
+  font-size: 1.8em;
+  margin-top: 10px;
+}

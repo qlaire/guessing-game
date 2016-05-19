@@ -62,11 +62,9 @@
           setTimeout(function() {
             playAgain();
           }, 2000);
-
+          }
         }
-      }
-    }
-
+       }
   }
 
   // shuffle the array for providing the hint
