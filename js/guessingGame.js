@@ -34,13 +34,13 @@
 
   function guessMessage() {
     if (Math.abs(playersGuess - winningNumber) <= 5) {
-      return "Your guess is " + lowerOrHigher() + " and within 5 digits of the Winning Number!";
+      return "Your guess is " + lowerOrHigher() + " and within 5 of the winning number";
     } else if (Math.abs(playersGuess - winningNumber) <= 10) {
-      return "Your guess is " + lowerOrHigher() + " and within 10 digits of the Winning Number!";
+      return "Your guess is " + lowerOrHigher() + " and within 10 of the winning number!";
     } else if (Math.abs(playersGuess - winningNumber) <= 20) {
-      return "Your guess is " + lowerOrHigher() + " and within 20 digits of the Winning Number!";
+      return "Your guess is " + lowerOrHigher() + " and within 20 of the winning number!";
     } else {
-      return "Your guess is " + lowerOrHigher() + " and more than 20 digits away from the Winning Number!";
+      return "Your guess is " + lowerOrHigher() + " and more than 20 away from the winning number!";
     }
   }
 
