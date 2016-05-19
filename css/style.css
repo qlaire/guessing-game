@@ -41,19 +41,29 @@ h1 {
 }
 
 .winspin {
+  -webkit-transition: -webkit-transform 2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: -webkit-transform 2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
   transition: transform 2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: transform 2s cubic-bezier(0.18, 0.89, 0.32, 1.28), -webkit-transform 2s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 
 }
 
 .go {
-  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+@-webkit-keyframes boo {
+  0%, 100% {-webkit-transform: translateY(0);transform: translateY(0);}
+  50% {-webkit-transform: translateY(20px);transform: translateY(20px);}
 }
 
 @keyframes boo {
-  0%, 100% {transform: translateY(0);}
-  50% {transform: translateY(20px);}
+  0%, 100% {-webkit-transform: translateY(0);transform: translateY(0);}
+  50% {-webkit-transform: translateY(20px);transform: translateY(20px);}
 }
 
 .glyphicon-thumbs-down {
-  animation: 2s 2 boo;
+  -webkit-animation: 2s 2 boo;
+          animation: 2s 2 boo;
 }
